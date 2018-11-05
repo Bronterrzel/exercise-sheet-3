@@ -16,6 +16,7 @@ public class Exercise03 extends Exercise03Base
         + " auf " + territory.getTerritorySize().getRowCount() + " Felder groß.");
         paule.write("Es existieren Koerner in der Anzahl :" + territory.getTotalGrainCount());
         
+        
         // Leave this call intact for challenge 3!
         challenge3();
     }
