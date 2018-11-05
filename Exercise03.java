@@ -11,10 +11,18 @@ public class Exercise03 extends Exercise03Base
         game.displayInNewGameWindow();
 
         // TODO: Implement me!
+        //Hmaster output
         paule.write("Hier sind " + territory.getTotalHamsterCount() + " Hamster.");
         paule.write("Das Territorium ist " + territory.getTerritorySize().getColumnCount() 
         + " auf " + territory.getTerritorySize().getRowCount() + " Felder groß.");
-        paule.write("Es existieren Koerner in der Anzahl :" + territory.getTotalGrainCount());
+        paule.write("Es existieren " + territory.getTotalGrainCount() + " Koerner.");
+        
+        //Console output
+        paule.write("Hier sind " + territory.getTotalHamsterCount() + " Hamster.");
+        paule.write("Das Territorium ist " + territory.getTerritorySize().getColumnCount() 
+        + " auf " + territory.getTerritorySize().getRowCount() + " Felder groß.");
+        paule.write("Es existieren " + territory.getTotalGrainCount() + " Koerner.");
+        
         
         // Leave this call intact for challenge 3!
         challenge3();
