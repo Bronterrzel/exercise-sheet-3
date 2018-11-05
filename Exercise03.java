@@ -6,18 +6,15 @@
  */
 public class Exercise03 extends Exercise03Base
 {
-    void run() {
-        game.initialize();
-        game.displayInNewGameWindow();
-
-        // TODO: Implement me!
-        //Hmaster output
+    //Hmaster output
+    private void hmasterOutput() {
         paule.write("Hier sind " + territory.getTotalHamsterCount() + " Hamster.");
         paule.write("Das Territorium ist " + territory.getTerritorySize().getColumnCount() 
         + " auf " + territory.getTerritorySize().getRowCount() + " Felder groß.");
         paule.write("Es existieren " + territory.getTotalGrainCount() + " Koerner.");
-        
-        //Console output
+    }
+    
+    private void consoleOutput() {
         System.out.print("Hier sind ");
         System.out.print(territory.getTotalHamsterCount());
         System.out.println(" Hamster.");
@@ -31,8 +28,24 @@ public class Exercise03 extends Exercise03Base
         System.out.print("Es existieren ");
         System.out.print(territory.getTotalGrainCount());
         System.out.println(" Koerner.");
+    }
+    
+    //Console output
+    void run() {
+        game.initialize();
+        game.displayInNewGameWindow();
         
+        hmasterOutput();
+        consoleOutput();
         
+        //Hamster will have done smth
+        paule.move();
+        paule.move();
+        paule.pickGrain();
+        paule.pickGrain();
+        
+        hmasterOutput();
+        consoleOutput();
         
         // Leave this call intact for challenge 3!
         challenge3();
