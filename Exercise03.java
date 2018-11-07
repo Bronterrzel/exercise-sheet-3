@@ -4,30 +4,31 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
+
 public class Exercise03 extends Exercise03Base
 {
     //Hmaster output
     private void hmasterOutput() {
         paule.write("Hier sind " + territory.getTotalHamsterCount() + " Hamster.");
         paule.write("Das Territorium ist " + territory.getTerritorySize().getColumnCount() 
-        + " auf " + territory.getTerritorySize().getRowCount() + " Felder groß.");
+                    + " auf " + territory.getTerritorySize().getRowCount() + " Felder groß.");
         paule.write("Es existieren " + territory.getTotalGrainCount() + " Koerner.");
     }
     
     private void consoleOutput() {
-        System.out.print("Hier sind ");
-        System.out.print(territory.getTotalHamsterCount());
-        System.out.println(" Hamster.");
+        output.print("Hier sind ");
+        output.print(territory.getTotalHamsterCount());
+        output.println(" Hamster.");
         
-        System.out.print("Das Territorium ist ");
-        System.out.print(territory.getTerritorySize().getColumnCount()); 
-        System.out.print(" auf ");
-        System.out.print(territory.getTerritorySize().getRowCount());
-        System.out.println(" Felder groß.");
+        output.print("Das Territorium ist ");
+        output.print(territory.getTerritorySize().getColumnCount()); 
+        output.print(" auf ");
+        output.print(territory.getTerritorySize().getRowCount());
+        output.println(" Felder groß.");
         
-        System.out.print("Es existieren ");
-        System.out.print(territory.getTotalGrainCount());
-        System.out.println(" Koerner.");
+        output.print("Es existieren ");
+        output.print(territory.getTotalGrainCount());
+        output.println(" Koerner.");
     }
     
     //Console output
